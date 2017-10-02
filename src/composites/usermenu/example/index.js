@@ -1,16 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { ExampleConfig } from 'style-guide';
-import t from '../../../utils/locales';
 import DropdownMenu from '../../../components/dropdown/DropdownMenu';
 import DropdownMenuItem from '../../../components/dropdown/DropdownMenuItem';
 import UserMenu from '../UserMenu';
 
 class UserMenuExample extends Component {
-  static contextTypes = {
-    axiomLanguage: PropTypes.oneOf(['en', 'de', 'es', 'fr']),
-  };
-
   static propTypes = {
     components: PropTypes.shape({
       UserMenu: PropTypes.object,
@@ -19,7 +14,6 @@ class UserMenuExample extends Component {
 
   render() {
     const { components } = this.props;
-    const { axiomLanguage } = this.context;
     const propTypes = {
       UserMenu: components.UserMenu,
     };
@@ -39,11 +33,11 @@ class UserMenuExample extends Component {
         <UserMenu { ...initalProps.UserMenu }>
           <DropdownMenu>
             <DropdownMenuItem>
-              { t(axiomLanguage, 'settings') }
+              Settings
             </DropdownMenuItem>
 
             <DropdownMenuItem>
-              { t(axiomLanguage, 'help') }
+              Help!
             </DropdownMenuItem>
           </DropdownMenu>
         </UserMenu>
