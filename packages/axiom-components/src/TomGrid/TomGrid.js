@@ -19,7 +19,7 @@ export default class TomGrid extends Component {
   static defaultProps = {
     columnWidth: '1fr',
     gap: 'medium',
-    minColumnWidth: '250px',
+    minColumnWidth: '200px',
   }
 
   render() {
