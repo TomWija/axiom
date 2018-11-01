@@ -38,7 +38,7 @@
   padding-bottom: var(--component-border-width);
   border-color: var(--color-theme-border);
   border-bottom-color: transparent;
-  background-color: var(--color-theme-background);
+  background-color: transparent;
   color: var(--color-ui-accent--active);
 }
 
