@@ -20,6 +20,8 @@ export default class ProgressButton extends Component {
     isInProgress: PropTypes.bool,
     /** Size of the Button. See Button[size]. */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
+    /** Style of the Button, that affects it's coloring and sizing */
+    style: PropTypes.oneOf(['primary', 'secondary']),
   };
 
   render() {
@@ -27,6 +29,7 @@ export default class ProgressButton extends Component {
       children,
       isInProgress,
       size = Button.defaultProps.size,
+      style = Button.defaultProps.style,
       ...rest
     } = this.props;
 
@@ -38,7 +41,7 @@ export default class ProgressButton extends Component {
       <Button { ...rest }
           active={ isInProgress }
           size={ size }
-          style="primary">
+          style={ style }>
         <div className={ classes }>
           <Cloak
               className="ax-progress-button__content"
